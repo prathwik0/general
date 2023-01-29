@@ -1,0 +1,10 @@
+*
+!/**/
+!*.c
+!*.h 
+!*.txt
+!*Makefile
+!*.py
+!*.cpp
+!.gitignore
+!README.md
