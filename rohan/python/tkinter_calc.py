@@ -17,6 +17,12 @@ def buttonequal():
     print(exprsn)
 
 
+def buttonclear():
+    global exprsn
+    exprsn = ""
+    input_txt.set(exprsn)
+
+
 def buttondel():
     global exprsn
     temp = list(exprsn)
@@ -76,7 +82,10 @@ b = Button(bframe, text="del", width=10, height=2, fg="black",
            bg="white", command=lambda: buttondel()).grid(row=0, column=4)
 
 b = Button(bframe, text="=", width=10, height=2, fg="black",
-           bg="white", command=lambda: buttonequal()).grid(row=3, column=4)
+           bg="tomato", command=lambda: buttonequal()).grid(row=3, column=4)
+
+b = Button(bframe, text="AC", width=10, height=2, fg="blue",
+           bg="cyan", command=lambda: buttonclear()).grid(row=4, column=3)
 
 bframe.pack()
 root.mainloop()
